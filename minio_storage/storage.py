@@ -122,10 +122,11 @@ class MinioStorage(Storage):
 
     def url(self, name):
         # type: (str) -> str
-        if self.exists(name):
-            return self.client.presigned_get_object(self.bucket_name, name)
-        else:
-            raise IOError("This file does not exist")
+        #if self.exists(name):
+        #    return self.client.presigned_get_object(self.bucket_name, name)
+        #else:
+        #    raise IOError("This file does not exist")
+        return "https://static.storekit.org/" + self.bucket_name + "/" + name
 
     def accessed_time(self, name):
         # type: (str) -> datetime.datetime
