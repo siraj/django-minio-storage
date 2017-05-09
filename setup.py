@@ -17,7 +17,7 @@ setup(
     packages=['minio_storage'],
     install_requires=[
         "django>=1.9",
-        "minio>=1.0.2",
+        "minio==1.0.2",
     ],
     extras_require={
         "test": [
